@@ -1,0 +1,21 @@
+.item {
+}
+
+.name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.status {
+  margin: 0;
+  font-size: 10px;
+}
+
+.online {
+  color: teal;
+}
+
+.offline {
+  color: red;
+}

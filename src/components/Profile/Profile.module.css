@@ -1,0 +1,77 @@
+.profile {
+  border: 3px solid black;
+  border-radius: 10px;
+  margin: 30px 10px;
+  box-shadow: 4px 5px 2px 1px rgb(165, 165, 165);
+}
+
+.profileEl {
+  padding-top: 20px;
+}
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: turquoise;
+}
+.username {
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(4, 95, 95);
+  line-height: 1.4;
+  margin: 10px 0;
+}
+.tag {
+  font-size: 20px;
+  font-weight: 500;
+  color: gray;
+  line-height: 0.8;
+  margin: 8px 0;
+}
+.location {
+  font-size: 20px;
+  font-weight: 500;
+  color: teal;
+  line-height: 1.4;
+  margin: 8px 0;
+}
+
+.stats {
+  font-size: 20px;
+  font-weight: 500;
+  color: teal;
+  line-height: 1.4;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  background-color: rgb(192, 202, 212);
+  border-radius: 8px;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid gray;
+  padding: 10px 0;
+}
+
+.stats > .element:nth-child(1),
+.stats > .element:nth-child(2) {
+  border-right: 2px solid gray;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  line-height: 1.4;
+}
+.value {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  line-height: 1.4;
+}
