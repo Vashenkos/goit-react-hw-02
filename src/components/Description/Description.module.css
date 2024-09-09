@@ -3,6 +3,7 @@
   background-color: white; /* bg-white */  
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */  
   border-radius: 8px; /* rounded-lg */  
+  flex-direction: column;
 }  
 
 .cafe-title {  

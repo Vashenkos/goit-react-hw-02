@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from 'react';  
+import { useEffect, useState } from "react";
 import Options from './components/Options/Options';  
 import Feedback from './components/Feedback/Feedback';  
 import Notification from './components/Notification/Notification';  
@@ -41,7 +41,7 @@ const App = () => {
             {totalFeedback > 0 ? (  
                 <Feedback feedbackCounts={feedback} totalFeedback={totalFeedback} />  
             ) : (  
-                <Notification message="No feedback given yet." />  
+                <Notification />  
             )}  
         </div>  
     );  

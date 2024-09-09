@@ -1,14 +1,16 @@
-import s from "./Feedback.module.css";
+  const Feedback = ({ feedbackCounts, totalFeedback }) => {  
+    const positiveFeedback = Math.round((feedbackCounts.good / totalFeedback) * 100);  
 
-const Feedback = ({ feedback }) => {  
-  return (  
-      <div className="feedback-container">  
-          <h2 className="text-lg font-semibold">Відгуки:</h2>  
-          <p>Добре: {feedback.good}</p>  
-          <p>Нейтрально: {feedback.neutral}</p>  
-          <p>Погано: {feedback.bad}</p>  
-      </div>  
-  );  
+    return (  
+        <div className="feedback">  
+            <h2>Feedback Statistics</h2>  
+            <p>Good: {feedbackCounts.good}</p>  
+            <p>Neutral: {feedbackCounts.neutral}</p>  
+            <p>Bad: {feedbackCounts.bad}</p>  
+            <p>Total: {totalFeedback}</p>  
+            <p>Positive Feedback: {positiveFeedback}%</p>  
+        </div>  
+    );  
 };  
 
-export default Feedback;  
+export default Feedback;
