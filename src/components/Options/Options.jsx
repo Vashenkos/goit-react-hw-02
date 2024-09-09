@@ -1,5 +1,3 @@
-
-
 const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {  
     return (  
         <div className="options">  
