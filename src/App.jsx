@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";  
 import Options from './components/Options/Options';  
 import Feedback from './components/Feedback/Feedback';  
-import Notification from './components/Notification/Notification'; 
-import "./App.css"; 
+import Notification from './components/Notification/Notification';   
+import "./App.css";   
 
 const App = () => {  
     const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });  
@@ -24,11 +24,11 @@ const App = () => {
     };  
 
     const totalFeedback = feedback.good + feedback.neutral + feedback.bad;  
-
+    const positiveFeedback = totalFeedback > 0 ? Math.round((feedback.good / totalFeedback) * 100) : 0; 
     const resetFeedback = () => {  
         setFeedback({ good: 0, neutral: 0, bad: 0 });  
     };  
-
+    
     return (  
         <div className="app">  
             <h1>Sip Happens Café</h1>  
@@ -40,7 +40,11 @@ const App = () => {
                 feedbackCounts={feedback}  
             />  
             {totalFeedback > 0 ? (  
-                <Feedback feedbackCounts={feedback} totalFeedback={totalFeedback} />  
+                <Feedback   
+                    feedbackCounts={feedback}   
+                    totalFeedback={totalFeedback}   
+                    positiveFeedback={positiveFeedback}
+                />  
             ) : (  
                 <Notification message="No feedback given yet." />  
             )}  
